@@ -61,7 +61,7 @@ print(test_data[0])
 
 ## Preprocess the train and test data
 minimum_freq = 2  # Words that appear less frequently than minimum_freq are treated as UNKNOWN.
-preprocess_test(train_data[:100], test_data[:100], minimum_freq)  ## Q1
+preprocess_test(train_data[:100], test_data[:100], minimum_freq)  
 train_data_processed, test_data_processed, vocabulary = preprocess_data(train_data, test_data, minimum_freq)
 
 print("First preprocessed training sample:")
@@ -90,12 +90,12 @@ unique_words = list(set(sentences_flatten))
 # <s> is omitted since it should not appear as the next word
 unique_words += ["<e>", "<unk>"]
 
-count_test(sentences) ## Q2
-ngram_test(sentences)  ## Q3
-ngram_prob_test(sentences, unique_words)  ## Q4
+count_test(sentences)
+ngram_test(sentences) 
+ngram_prob_test(sentences, unique_words)  
 count_matrix_test(sentences, unique_words)
 prob_matrix_test(sentences, unique_words)
-ppl_test(sentences, unique_words) ## Q5
+ppl_test(sentences, unique_words) 
 autocomplete_test(sentences, unique_words, train_data_processed)
 
 print("\nCongratulations! You have completed all tasks.")
