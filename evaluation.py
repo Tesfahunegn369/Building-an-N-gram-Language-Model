@@ -1,6 +1,5 @@
 from ngram import count_n_grams, estimate_probability
 
-# Q5: Perplexity (25 pts)
 def calculate_perplexity(sentence, n_gram_counts, n_plus1_gram_counts, vocabulary_size):
     """
     Calculate perplexity for a list of sentences
@@ -32,7 +31,6 @@ def calculate_perplexity(sentence, n_gram_counts, n_plus1_gram_counts, vocabular
     # Update this in the code below
     product_pi = 1.0
 
-    ### START CODE HERE (Replace instances of 'None' with your code) ###
 
     # Index t ranges from n to N - 1, inclusive on both ends
     for t in range(n, N):  # complete this line
@@ -56,14 +54,11 @@ def calculate_perplexity(sentence, n_gram_counts, n_plus1_gram_counts, vocabular
     # Take the -1/N power of the product
     perplexity = pow(product_pi, -1/N)
 
-    ### END CODE HERE ###
     return perplexity
 
 
-########################################################################################################################
-
 def ppl_test(sentences, unique_words):
-    print("\n## Q5: Perplexity (25 pts)")
+    print("\nPerplexity ")
     unigram_counts = count_n_grams(sentences, 1)
     bigram_counts = count_n_grams(sentences, 2)
 
