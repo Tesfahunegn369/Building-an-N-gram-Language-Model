@@ -75,7 +75,7 @@ print(vocabulary[0:10])
 
 print("\nSize of vocabulary:", len(vocabulary))
 
-##################################### Preprocessing is finished
+#Preprocessing is finished
 
 ## n-gram test: Bigram
 sentences = [['i', 'like', 'a', 'cat'],
