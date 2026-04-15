@@ -75,8 +75,6 @@ def replace_oov_words_by_unk(tokenized_sentences, vocabulary, unknown_token="<un
     return replaced_tokenized_sentences
 
 
-########################################################################################################################
-
 def vocab_test():
     tokenized_sentences = [['sky', 'is', 'blue', '.'],
                            ['leaves', 'are', 'green', '.'],
