@@ -1,7 +1,7 @@
 import numpy as np
 import pandas as pd
 
-# Q3: Count n-gram (25 pts)
+  #Count n-gram 
 def count_n_grams(data, n, start_token='<s>', end_token='<e>'):
     """
     Count all n-grams in the data
@@ -16,8 +16,6 @@ def count_n_grams(data, n, start_token='<s>', end_token='<e>'):
 
     # Initialize dictionary of n-grams and their counts
     n_grams = {}
-
-    ### START CODE HERE (Replace instances of 'None' with your code) ###
 
     # Go through each sentence in the data
     for sentence in data:  # complete this line
@@ -49,11 +47,10 @@ def count_n_grams(data, n, start_token='<s>', end_token='<e>'):
                 # Initialize this n-gram count to 1
                 n_grams[n_gram] = 1
 
-            ### END CODE HERE ###
     return n_grams
 
 
-# Q4: Get n-gram probability (25 pts)
+# Get n-gram probability
 def estimate_probability(word, previous_n_gram,
                          n_gram_counts, n_plus1_gram_counts, vocabulary_size):
     """
@@ -98,8 +95,6 @@ def estimate_probability(word, previous_n_gram,
 
     # Calculate the probability as the numerator divided by denominator
     probability = numerator / denominator
-
-    ### END CODE HERE ###
 
     return probability
 
@@ -167,10 +162,8 @@ def make_probability_matrix(n_plus1_gram_counts, vocabulary):
     return prob_matrix
 
 
-########################################################################################################################
-
 def ngram_test(sentences):
-    print("\n## Q3: n-gram (Unigram, Bigram) (25 pts)")
+    print("\n n-gram (Unigram, Bigram)")
     unigram = count_n_grams(sentences, 1)
     bigram = count_n_grams(sentences, 2)
     print("Unigram:")
@@ -192,7 +185,7 @@ def ngram_test(sentences):
     print('')
 
 def ngram_prob_test(sentences, unique_words):
-    print("\n## Q4: Bigram probability (25 pts)")
+    print("\n Bigram probability)")
     unigram_counts = count_n_grams(sentences, 1)
     bigram_counts = count_n_grams(sentences, 2)
 
