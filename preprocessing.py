@@ -1,6 +1,6 @@
 from vocab import get_words_with_nplus_frequency, replace_oov_words_by_unk
 
-# Q1: Preprocessing (Get the closed vocab, handling unknown word) (10 pts)
+# Preprocessing (Get the closed vocab, handling unknown word)
 def preprocess_data(train_data, test_data, count_threshold):
     """
     Preprocess data, i.e.,
@@ -17,7 +17,6 @@ def preprocess_data(train_data, test_data, count_threshold):
         - test data with low frequent words replaced by "<unk>"
         - vocabulary of words that appear n times or more in the training data
     """
-    ### START CODE HERE (Replace instances of 'None' with your code) ###
 
     # Get the closed vocabulary using the train data
     vocabulary = get_words_with_nplus_frequency(train_data, count_threshold)
@@ -28,14 +27,11 @@ def preprocess_data(train_data, test_data, count_threshold):
     # For the test data, replace less common words with "<unk>"
     test_data_replaced = replace_oov_words_by_unk(test_data, vocabulary)
 
-    ### END CODE HERE ###
     return train_data_replaced, test_data_replaced, vocabulary
 
 
-########################################################################################################################
-
 def preprocess_test(train_inst, test_inst, minimum_freq):
-    print("\n## Q1: Preprocessing (Get the closed vocab, handling unknown word) (10 pts)")
+    print("\n Preprocessing (Get the closed vocab, handling unknown word)")
     print(f"Training instance: {train_inst}")
     print(f"Test instance    : {test_inst}")
 
