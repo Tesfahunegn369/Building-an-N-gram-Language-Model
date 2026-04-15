@@ -1,5 +1,5 @@
 
-# Q2: Implement word count function (15 pts)
+# Implement word count function
 def count_words(tokenized_sentences):
     """
     Count the number of word appearence in the tokenized sentences
@@ -12,7 +12,6 @@ def count_words(tokenized_sentences):
     """
 
     word_counts = {}
-    ### START CODE HERE (Replace instances of 'None' with your code) ###
 
     # Loop through each sentence
     for sentence in tokenized_sentences:  # complete this line
@@ -28,15 +27,11 @@ def count_words(tokenized_sentences):
             else:
                 word_counts[token] += 1
 
-    ### END CODE HERE ###
-
     return word_counts
 
 
-########################################################################################################################
-
 def count_test(sentences):
-    print("\n## Q2: Count words (15 pts)")
+    print("\n Count words ")
     count_result = count_words(sentences)
     print("Counting words" + str(count_result))
     if count_result == {'i': 1, 'like': 2, 'a': 2, 'cat': 2, 'this': 1, 'dog': 1, 'is': 1}:
